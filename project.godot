@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="hobby-project"
+run/main_scene="uid://bm237tpncm541"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [display]
 
@@ -21,6 +22,10 @@ window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/net.yarvis.pixel_pen/plugin.cfg")
 
 [input_devices]
 
