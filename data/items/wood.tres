@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://vrrldluvxw17"]
+
+[ext_resource type="Script" uid="uid://cvq6d8kp4e44t" path="res://data/items/ItemData.gd" id="1_pkq13"]
+
+[resource]
+script = ExtResource("1_pkq13")
+item_name = "Wood"
+item_desc = "basic wood"
+item_buy = 1
+item_wait_time = 3.0
+item_type = Array[String](["burn", "craft"])
+metadata/_custom_type_script = "uid://cvq6d8kp4e44t"
