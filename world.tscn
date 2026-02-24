@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1bwfe3end0bu" path="res://addons/net.yarvis.pixel_pen/resources/icon/Icon.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://jefxxk3fy71w" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://d22g6o6b6nibj" path="res://tree.tscn" id="3_tlwt5"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fj7yv"]
 vertices = PackedVector2Array(446.03125, -447.03906, 448.96094, 445.85156, -452.0703, 433.1328, -458.92188, -450.95313)
@@ -19,3 +20,6 @@ texture = ExtResource("1_f3sb7")
 
 [node name="Player" parent="." unique_id=1848999960 instance=ExtResource("2_fj7yv")]
 position = Vector2(-48, -53)
+
+[node name="Tree" parent="." unique_id=1616521525 instance=ExtResource("3_tlwt5")]
+position = Vector2(325, -342)
