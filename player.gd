@@ -18,3 +18,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			nav_agent.target_position = get_global_mouse_position()
+
+func move_to_pos(target: Vector2):
+	nav_agent.target_position = target
+
+
+func _on_tree_interacted(destination_pos: Variant) -> void:
+	pass # Replace with function body.

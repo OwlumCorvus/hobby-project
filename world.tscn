@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://csbxym10ishe4"]
 
+[ext_resource type="Script" uid="uid://dfrftenbef8a2" path="res://world.gd" id="1_aqk2v"]
 [ext_resource type="Texture2D" uid="uid://d1bwfe3end0bu" path="res://addons/net.yarvis.pixel_pen/resources/icon/Icon.png" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://jefxxk3fy71w" path="res://player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://d22g6o6b6nibj" path="res://tree.tscn" id="3_tlwt5"]
@@ -10,6 +11,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-469, -461, 456, -457, 459, 456, -462, 443)])
 
 [node name="World" type="Node2D" unique_id=1319664677]
+script = ExtResource("1_aqk2v")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2108770563]
 navigation_polygon = SubResource("NavigationPolygon_fj7yv")
@@ -23,3 +25,5 @@ position = Vector2(-48, -53)
 
 [node name="Tree" parent="." unique_id=1616521525 instance=ExtResource("3_tlwt5")]
 position = Vector2(325, -342)
+
+[connection signal="interacted" from="Tree" to="Player" method="_on_tree_interacted"]
