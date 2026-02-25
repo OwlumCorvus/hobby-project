@@ -21,9 +21,6 @@ scale = Vector2(20, 20)
 texture = ExtResource("1_f3sb7")
 
 [node name="Player" parent="." unique_id=1848999960 instance=ExtResource("2_fj7yv")]
-position = Vector2(-48, -53)
 
 [node name="Tree" parent="." unique_id=1616521525 instance=ExtResource("3_tlwt5")]
-position = Vector2(325, -342)
-
-[connection signal="interacted" from="Tree" to="Player" method="_on_tree_interacted"]
+position = Vector2(299, -327)

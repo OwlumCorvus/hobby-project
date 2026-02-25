@@ -7,6 +7,16 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_sh265"]
 radius = 58.694122
 
+[sub_resource type="Gradient" id="Gradient_4flbx"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_onrkg"]
+gradient = SubResource("Gradient_4flbx")
+
+[sub_resource type="Gradient" id="Gradient_i3pqv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hqtel"]
+gradient = SubResource("Gradient_i3pqv")
+
 [node name="Player" type="CharacterBody2D" unique_id=1848999960]
 script = ExtResource("1_4flbx")
 
@@ -28,6 +38,17 @@ position = Vector2(54, 55)
 shape = SubResource("CircleShape2D_sh265")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=155215168]
-target_desired_distance = 32.0
+target_desired_distance = 160.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121812472]
+
+[node name="InteractionBar" type="TextureProgressBar" parent="." unique_id=1594704468]
+visible = false
+offset_left = -53.0
+offset_top = -68.0
+offset_right = 166.0
+offset_bottom = -29.0
+texture_under = SubResource("GradientTexture2D_onrkg")
+texture_progress = SubResource("GradientTexture2D_hqtel")
+tint_under = Color(0, 0, 0, 1)
+tint_progress = Color(0.40448982, 0.7783355, 0.263177, 1)

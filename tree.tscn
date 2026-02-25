@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://d22g6o6b6nibj"]
 
-[ext_resource type="Script" uid="uid://i0rf76j277c" path="res://static_body_2d.gd" id="1_nnvrw"]
+[ext_resource type="Script" uid="uid://dsermsrk65b6y" path="res://tree.gd" id="1_nnvrw"]
 [ext_resource type="Texture2D" uid="uid://c42l5b674qps0" path="res://Tree.png" id="2_gvmkm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d2g23"]
-radius = 96.519424
+radius = 136.44412
 
 [node name="Tree" type="StaticBody2D" unique_id=1616521525]
+input_pickable = true
 script = ExtResource("1_nnvrw")
-object_name = "Oak Tree "
+object_name = "Oak Tree"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1780073218]
 scale = Vector2(10, 10)
