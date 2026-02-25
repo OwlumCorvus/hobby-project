@@ -28,5 +28,6 @@ position = Vector2(54, 55)
 shape = SubResource("CircleShape2D_sh265")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=155215168]
+target_desired_distance = 32.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121812472]

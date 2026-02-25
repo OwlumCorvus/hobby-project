@@ -11,5 +11,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func _on_tree_clicked(dest):
-	player.move_to_pos(dest)
+func _on_tree_clicked(tree_object):
+	player.interact_with_object(tree_object)

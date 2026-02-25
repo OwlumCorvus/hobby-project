@@ -3,7 +3,7 @@ class_name Interactable
 
 @export var object_name: String = "Generic Object"
 
-signal interacted(destination_pos)
+signal interacted(object: Interactable)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +12,7 @@ func _ready() -> void:
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			interacted.emit(global_position)
+			interacted.emit(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
