@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d22g6o6b6nibj"]
+
+[ext_resource type="Script" uid="uid://45to4iecr2pt" path="res://interactable.gd" id="1_3xuqs"]
+[ext_resource type="Texture2D" uid="uid://c42l5b674qps0" path="res://assests/Tree.png" id="2_gvmkm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d2g23"]
+radius = 82.96987
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nnvrw"]
+radius = 147.01361
+
+[node name="Object" type="StaticBody2D" unique_id=632398813]
+input_pickable = true
+script = ExtResource("1_3xuqs")
+metadata/_custom_type_script = "uid://45to4iecr2pt"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1780073218]
+scale = Vector2(10, 10)
+texture = ExtResource("2_gvmkm")
+
+[node name="ObjectCollision" type="CollisionShape2D" parent="." unique_id=1756563861]
+position = Vector2(-2, 38)
+shape = SubResource("CircleShape2D_d2g23")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=154595724]
+
+[node name="ObjectAreaCollision" type="CollisionShape2D" parent="Area2D" unique_id=1978164628]
+visible = false
+position = Vector2(-7, 35)
+shape = SubResource("CircleShape2D_nnvrw")
+
+[node name="ObjectProgressBar" type="TextureProgressBar" parent="." unique_id=50265543]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ObjectLabel" type="Label" parent="." unique_id=2138127495]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ActionTimer" type="Timer" parent="." unique_id=1225178496]
+
+[node name="DepletedTimer" type="Timer" parent="." unique_id=1480605609]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
