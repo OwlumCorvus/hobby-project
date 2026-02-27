@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 300.0
+var speed: float = 250.0
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 
 func _ready() -> void:
@@ -16,5 +16,7 @@ func _physics_process(_delta: float) -> void:
 	if nav_agent.is_navigation_finished():
 		return
 	var next_pos = nav_agent.get_next_path_position()
+	print("player", global_position, "next", next_pos)
 	velocity = global_position.direction_to(next_pos) * speed
+	
 	move_and_slide()
