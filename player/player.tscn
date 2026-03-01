@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jefxxk3fy71w"]
 
-[ext_resource type="Script" uid="uid://bwxtg8jmrmcta" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bwxtg8jmrmcta" path="res://player/player.gd" id="1_4flbx"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4flbx"]
 
@@ -31,3 +31,7 @@ shape = SubResource("CircleShape2D_sh265")
 target_desired_distance = 160.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121812472]
+<<<<<<< HEAD:player.tscn
+=======
+zoom = Vector2(1.5, 1.5)
+>>>>>>> main:player/player.tscn
