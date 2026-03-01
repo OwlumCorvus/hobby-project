@@ -3,10 +3,9 @@
 [ext_resource type="Script" uid="uid://bwxtg8jmrmcta" path="res://player/player.gd" id="1_4flbx"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4flbx"]
-size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
-size = Vector2(32, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_sh265"]
+radius = 58.694122
 
 [node name="Player" type="CharacterBody2D" unique_id=1848999960]
 script = ExtResource("1_4flbx")
@@ -14,6 +13,8 @@ script = ExtResource("1_4flbx")
 [node name="Visuals" type="Node2D" parent="." unique_id=1941213268]
 
 [node name="Body" type="Sprite2D" parent="Visuals" unique_id=1156245996]
+position = Vector2(52.75, 51.75)
+scale = Vector2(106.5, 104.5)
 texture = SubResource("PlaceholderTexture2D_4flbx")
 
 [node name="Hair" type="Sprite2D" parent="Visuals" unique_id=1496023794]
@@ -23,12 +24,11 @@ texture = SubResource("PlaceholderTexture2D_4flbx")
 [node name="Pants" type="Sprite2D" parent="Visuals" unique_id=2093241674]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1318723172]
-shape = SubResource("RectangleShape2D_oul6g")
+position = Vector2(54, 55)
+shape = SubResource("CircleShape2D_sh265")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=155215168]
-path_desired_distance = 8.0
-target_desired_distance = 8.0
-path_max_distance = 16.0
+target_desired_distance = 160.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121812472]
 zoom = Vector2(1.5, 1.5)
