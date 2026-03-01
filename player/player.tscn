@@ -31,4 +31,7 @@ shape = SubResource("CircleShape2D_sh265")
 target_desired_distance = 160.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1121812472]
+<<<<<<< HEAD:player.tscn
+=======
 zoom = Vector2(1.5, 1.5)
+>>>>>>> main:player/player.tscn
