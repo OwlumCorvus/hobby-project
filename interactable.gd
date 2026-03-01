@@ -9,6 +9,7 @@ class_name Interactable
 var is_near: bool = false
 
 func _ready() -> void:
+	self.input_event.connect(_on_input_event)
 	input_pickable = true
 	object_progress_bar.value = 0
 	
