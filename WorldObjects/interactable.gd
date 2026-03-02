@@ -1,14 +1,18 @@
 extends StaticBody2D
 class_name Interactable
 
+@export var obj_data: ObjectResource
 @onready var object_progress_bar: TextureProgressBar = $ObjectProgressBar
 @onready var action_timer: Timer = $ActionTimer
 @onready var depleted_timer: Timer = $DepletedTimer
 @onready var object_label: Label = $ObjectLabel
-
+@onready var object_sprite: Sprite2D = $Sprite2D
 var is_near: bool = false
 
 func _ready() -> void:
+	action_timer.wait_time = obj_data.obj_wait_time_action
+	object_sprite.texture = obj_data.obj_sprites[0]
+	object_label.text = obj_data.obj_name
 	input_pickable = true
 	object_progress_bar.value = 0
 	
@@ -41,3 +45,7 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 		is_near = false
 		action_timer.stop()
 		object_progress_bar.visible = false
+
+
+func _on_action_timer_timeout() -> void:
+	pass

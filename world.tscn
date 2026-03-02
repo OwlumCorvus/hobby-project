@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://csbxym10ishe4"]
 
-[ext_resource type="PackedScene" uid="uid://d22g6o6b6nibj" path="res://object.tscn" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://d22g6o6b6nibj" path="res://WorldObjects/object.tscn" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://btk6ievtelria" path="res://assests/grass.png" id="1_tlwt5"]
 [ext_resource type="PackedScene" uid="uid://jefxxk3fy71w" path="res://player/player.tscn" id="2_tlwt5"]
 
@@ -38,4 +38,4 @@ tile_set = SubResource("TileSet_aqk2v")
 position = Vector2(570, 1071)
 
 [node name="Player" parent="." unique_id=1848999960 instance=ExtResource("2_tlwt5")]
-position = Vector2(32, 23)
+position = Vector2(31, 76)
