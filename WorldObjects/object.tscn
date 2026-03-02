@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d22g6o6b6nibj"]
 
-[ext_resource type="Script" uid="uid://45to4iecr2pt" path="res://interactable.gd" id="1_3xuqs"]
+[ext_resource type="Script" uid="uid://45to4iecr2pt" path="res://WorldObjects/interactable.gd" id="1_3xuqs"]
 [ext_resource type="Texture2D" uid="uid://c42l5b674qps0" path="res://assests/Tree.png" id="2_gvmkm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d2g23"]
@@ -42,7 +42,6 @@ shape = SubResource("CircleShape2D_d2g23")
 [node name="Area2D" type="Area2D" parent="." unique_id=154595724]
 
 [node name="ObjectAreaCollision" type="CollisionShape2D" parent="Area2D" unique_id=1978164628]
-visible = false
 position = Vector2(-7, 35)
 shape = SubResource("CircleShape2D_nnvrw")
 
@@ -72,3 +71,4 @@ vertical_alignment = 1
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]
