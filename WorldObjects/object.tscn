@@ -72,3 +72,4 @@ vertical_alignment = 1
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="ActionTimer" to="." method="_on_action_timer_timeout"]
+[connection signal="timeout" from="DepletedTimer" to="." method="_on_depleted_timer_timeout"]
