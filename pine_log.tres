@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bfegf8ofe1f8l"]
+
+[ext_resource type="Script" uid="uid://bab6qdefoxtw0" path="res://ItemResource.gd" id="1_dc11g"]
+
+[resource]
+script = ExtResource("1_dc11g")
+itm_name = "Pine Log"
+itm_desc = "Good for fires and crafting."
+itm_type = Array[String](["Craftable", "burnable"])
+metadata/_custom_type_script = "uid://bab6qdefoxtw0"

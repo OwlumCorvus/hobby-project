@@ -1,15 +1,18 @@
 [gd_resource type="Resource" script_class="ObjectResource" format=3 uid="uid://ctipd3wsuulf4"]
 
 [ext_resource type="Script" uid="uid://3vy1umw1lca1" path="res://WorldObjects/ObjectRes.gd" id="1_d5eln"]
+[ext_resource type="Script" uid="uid://bab6qdefoxtw0" path="res://ItemResource.gd" id="1_k6qr0"]
 [ext_resource type="Texture2D" uid="uid://c42l5b674qps0" path="res://assests/Tree.png" id="1_ky4fo"]
+[ext_resource type="Resource" uid="uid://bfegf8ofe1f8l" path="res://pine_log.tres" id="2_tb6fl"]
 
 [resource]
 script = ExtResource("1_d5eln")
 obj_name = "Pine Tree"
 obj_desc = "A tall pine standing strong."
 obj_locations = Array[String](["Tutorial"])
-obj_items = Array[String](["Pine Log"])
+obj_items = Array[ExtResource("1_k6qr0")]([ExtResource("2_tb6fl")])
 obj_capacity = 5
+obj_exp_given = 3.0
 obj_wait_time_depleted = 5.0
 obj_wait_time_action = 3.0
 obj_sprites = Array[Texture2D]([ExtResource("1_ky4fo")])
